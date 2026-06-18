@@ -3,325 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dany | Portafolio Personal</title>
+<title>Tarjetas de Habilidades</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
 
 body{
     background:#f4f6f9;
-    color:#333;
-    line-height:1.6;
-}
-
-header{
-    background:linear-gradient(135deg,#0077ff,#00c6ff);
-    color:white;
-    text-align:center;
-    padding:100px 20px;
-}
-
-header h1{
-    font-size:4rem;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:1.3rem;
-}
-
-nav{
-    background:#111;
-    padding:15px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-nav ul{
-    display:flex;
-    justify-content:center;
-    list-style:none;
-    gap:30px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-nav a:hover{
-    color:#00c6ff;
-}
-
-section{
-    padding:80px 10%;
-}
-
-h2{
-    text-align:center;
-    margin-bottom:40px;
-    color:#0077ff;
-    font-size:2.5rem;
-}
-
-.sobre{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    gap:40px;
-}
-
-.foto{
-    flex:1;
-    min-width:250px;
-}
-
-.foto img{
-    width:100%;
-    border-radius:20px;
-}
-
-.texto{
-    flex:2;
+    padding:50px;
 }
 
 .habilidades{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:20px;
+    max-width:1200px;
+    margin:auto;
 }
 
-.card{
+.tarjeta{
     background:white;
     padding:25px;
     border-radius:15px;
     text-align:center;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-    transition:.3s;
+    box-shadow:0 10px 15px rgba(0,0,0,0.1);
+    transition:all .3s ease;
 }
 
-.card:hover{
-    transform:translateY(-8px);
+.icono{
+    font-size:50px;
+    margin-bottom:15px;
 }
 
-.proyectos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
+.tarjeta h3{
+    color:#0077ff;
+    margin-bottom:10px;
 }
 
-.proyecto{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
+.tarjeta p{
+    color:#555;
+    line-height:1.6;
 }
 
-.proyecto img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.proyecto .contenido{
-    padding:20px;
-}
-
-.galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
-}
-
-.galeria img{
-    width:100%;
-    border-radius:15px;
-}
-
-.contacto{
-    background:white;
-    padding:40px;
-    border-radius:15px;
-    max-width:700px;
-    margin:auto;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-input, textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border:1px solid #ccc;
-    border-radius:8px;
-}
-
-button{
-    background:#0077ff;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:8px;
+.tarjeta:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 25px -5px rgba(0,0,0,0.15);
+    background-color:#f8fafc;
     cursor:pointer;
-}
-
-button:hover{
-    background:#005fd1;
-}
-
-footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>DANY</h1>
-    <p>Desarrollador Web • Diseñador • Creador Digital</p>
-</header>
+<section class="habilidades">
 
-<nav>
-    <ul>
-        <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#sobre">Sobre mí</a></li>
-        <li><a href="#habilidades">Habilidades</a></li>
-        <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-    </ul>
-</nav>
-
-<section id="sobre">
-    <h2>Sobre Mí</h2>
-
-    <div class="sobre">
-        <div class="foto">
-            <img src="https://via.placeholder.com/400x500" alt="Foto de Dany">
-        </div>
-
-        <div class="texto">
-            <p>
-                Hola, soy <strong>Dany</strong>. Me apasiona el desarrollo web,
-                la tecnología y el diseño digital. Disfruto creando sitios web
-                modernos, rápidos y atractivos.
-            </p>
-
-            <br>
-
-            <p>
-                Tengo experiencia en HTML, CSS, JavaScript y diseño responsivo.
-                Mi objetivo es seguir aprendiendo y desarrollar proyectos que
-                generen impacto positivo.
-            </p>
-
-            <br>
-
-            <p>
-                Además de programar, me interesa la innovación tecnológica,
-                el emprendimiento y la creación de contenido digital.
-            </p>
-        </div>
+    <div class="tarjeta">
+        <div class="icono">💻</div>
+        <h3>Desarrollo Web</h3>
+        <p>
+            Creación de sitios web modernos, rápidos y totalmente responsivos.
+        </p>
     </div>
-</section>
 
-<section id="habilidades">
-    <h2>Mis Habilidades</h2>
-
-    <div class="habilidades">
-        <div class="card">
-            <h3>HTML5</h3>
-            <p>Estructuración profesional de sitios web.</p>
-        </div>
-
-        <div class="card">
-            <h3>CSS3</h3>
-            <p>Diseños modernos y responsivos.</p>
-        </div>
-
-        <div class="card">
-            <h3>JavaScript</h3>
-            <p>Interactividad y dinamismo.</p>
-        </div>
-
-        <div class="card">
-            <h3>Diseño UI/UX</h3>
-            <p>Experiencias atractivas para usuarios.</p>
-        </div>
+    <div class="tarjeta">
+        <div class="icono">🎨</div>
+        <h3>Diseño UI/UX</h3>
+        <p>
+            Diseño de interfaces atractivas y experiencias intuitivas.
+        </p>
     </div>
-</section>
 
-<section id="proyectos">
-    <h2>Mis Proyectos</h2>
-
-    <div class="proyectos">
-
-        <div class="proyecto">
-            <img src="https://via.placeholder.com/500x300" alt="">
-            <div class="contenido">
-                <h3>Portafolio Personal</h3>
-                <p>Sitio web moderno para mostrar mis habilidades y trabajos.</p>
-            </div>
-        </div>
-
-        <div class="proyecto">
-            <img src="https://via.placeholder.com/500x300" alt="">
-            <div class="contenido">
-                <h3>Tienda Online</h3>
-                <p>Diseño de comercio electrónico con interfaz moderna.</p>
-            </div>
-        </div>
-
-        <div class="proyecto">
-            <img src="https://via.placeholder.com/500x300" alt="">
-            <div class="contenido">
-                <h3>Blog Tecnológico</h3>
-                <p>Portal de noticias y artículos sobre tecnología.</p>
-            </div>
-        </div>
-
+    <div class="tarjeta">
+        <div class="icono">🤖</div>
+        <h3>Inteligencia Artificial</h3>
+        <p>
+            Integración de asistentes y modelos para automatización de código.
+        </p>
     </div>
+
 </section>
-
-<section id="galeria">
-    <h2>Galería</h2>
-
-    <div class="galeria">
-        <img src="https://via.placeholder.com/400x300" alt="">
-        <img src="https://via.placeholder.com/400x300" alt="">
-        <img src="https://via.placeholder.com/400x300" alt="">
-        <img src="https://via.placeholder.com/400x300" alt="">
-    </div>
-</section>
-
-<section id="contacto">
-    <h2>Contacto</h2>
-
-    <div class="contacto">
-        <form>
-            <input type="text" placeholder="Tu nombre">
-            <input type="email" placeholder="Tu correo">
-            <textarea rows="6" placeholder="Escribe tu mensaje"></textarea>
-            <button type="submit">Enviar Mensaje</button>
-        </form>
-    </div>
-</section>
-
-<footer>
-    <p>© 2026 Dany | Todos los derechos reservados.</p>
-</footer>
 
 </body>
 </html>
-
