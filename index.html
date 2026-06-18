@@ -1,95 +1,49 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarjetas con Imágenes</title>
+<div class="tarjeta">
+    <img src="img/web.jpg" alt="Desarrollo Web" class="imagen-tarjeta">
+    <h3>Desarrollo Web</h3>
+    <p>
+        Creación de sitios web modernos, rápidos y totalmente responsivos.
+    </p>
+</div>
+
+<div class="tarjeta">
+    <img src="img/diseno.jpg" alt="Diseño UI/UX" class="imagen-tarjeta">
+    <h3>Diseño UI/UX</h3>
+    <p>
+        Diseño de interfaces atractivas y experiencias intuitivas.
+    </p>
+</div>
+
+<div class="tarjeta">
+    <img src="img/ia.jpg" alt="Inteligencia Artificial" class="imagen-tarjeta">
+    <h3>Inteligencia Artificial</h3>
+    <p>
+        Integración de asistentes y modelos para automatización de código.
+    </p>
+</div>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Segoe UI',sans-serif;
-}
-
-body{
-    background:#f4f6f9;
-    padding:50px;
-}
-
-.habilidades{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-    max-width:1200px;
-    margin:auto;
-}
-
 .tarjeta{
     background:white;
+    padding:25px;
     border-radius:15px;
-    overflow:hidden;
     text-align:center;
-    box-shadow:0 10px 15px rgba(0,0,0,.1);
-    transition:.3s;
+    box-shadow:0 10px 15px rgba(0,0,0,0.1);
+    transition:all .3s ease;
+}
+
+.imagen-tarjeta{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+    margin-bottom:15px;
 }
 
 .tarjeta:hover{
     transform:translateY(-10px);
-    box-shadow:0 20px 25px rgba(0,0,0,.15);
-}
-
-.tarjeta img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
-
-.contenido{
-    padding:20px;
-}
-
-.contenido h3{
-    color:#0077ff;
-    margin-bottom:10px;
-}
-
-.contenido p{
-    color:#555;
+    box-shadow:0 20px 25px -5px rgba(0,0,0,0.15);
+    background-color:#f8fafc;
+    cursor:pointer;
 }
 </style>
-</head>
-
-<body>
-
-<section class="habilidades">
-
-    <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800" alt="Desarrollo Web">
-        <div class="contenido">
-            <h3>Desarrollo Web</h3>
-            <p>Creación de sitios web modernos y responsivos.</p>
-        </div>
-    </div>
-
-    <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800" alt="Diseño UI UX">
-        <div class="contenido">
-            <h3>Diseño UI/UX</h3>
-            <p>Interfaces atractivas y experiencias intuitivas.</p>
-        </div>
-    </div>
-
-    <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="Inteligencia Artificial">
-        <div class="contenido">
-            <h3>Inteligencia Artificial</h3>
-            <p>Integración de asistentes y automatización de código.</p>
-        </div>
-    </div>
-
-</section>
-
-</body>
-</html>
