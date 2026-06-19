@@ -1,99 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarjetas con Hover</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Espacio Profesional - Informática Social</title>
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f1f5f9;
-    margin: 0;
-    padding: 40px;
-}
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --accent-social: #34d399;
+        }
 
-.contenedor {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-.tarjeta {
-    width: 300px;
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    text-align: center;
-}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-.tarjeta:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 25px rgba(0,0,0,0.15);
-    background-color: #f8fafc;
-    cursor: pointer;
-}
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
 
-.tarjeta img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #334155;
+        }
 
-.contenido {
-    padding: 20px;
-}
+        .profile-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent), var(--accent-social));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
 
-h3 {
-    color: #1e293b;
-    margin-bottom: 10px;
-}
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.2rem;
+        }
 
-p {
-    color: #64748b;
-    line-height: 1.5;
-}
-</style>
+        section {
+            margin: 40px 0;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+
+        .card h3 {
+            color: #fff;
+        }
+
+        .links-section {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .btn {
+            background-color: var(--card-bg);
+            color: var(--text-main);
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            color: var(--text-muted);
+        }
+
+        /* ===== TARJETAS FINAL ===== */
+
+        .tarjetas-final {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background-color: #ffffff;
+            color: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .tarjeta img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .tarjeta h3 {
+            margin: 10px 0;
+            color: #0f172a;
+        }
+
+        .tarjeta p {
+            color: #475569;
+        }
+
+        @media (max-width: 600px) {
+            .tarjetas-final {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="contenedor">
+<div class="container">
 
-    <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800" alt="Inteligencia Artificial">
-        <div class="contenido">
-            <h3>Inteligencia Artificial</h3>
-            <p>
-                Integración de asistentes y modelos para automatización de código.
-            </p>
-        </div>
-    </div>
+    <header>
+        <h1 class="profile-title">Bryan</h1>
+        <p class="subtitle">Informática & Gestión Social de Tecnología</p>
+    </header>
 
-    <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="Desarrollo Web">
-        <div class="contenido">
-            <h3>Desarrollo Web</h3>
-            <p>
-                Creación de sitios modernos, rápidos y adaptados a cualquier dispositivo.
-            </p>
-        </div>
-    </div>
+    <section>
+        <h2>Sobre mí</h2>
+        <p>Estudiante enfocado en desarrollo de sistemas y tecnología.</p>
+    </section>
 
-    <div class="tarjeta">
-        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800" alt="Programación">
-        <div class="contenido">
-            <h3>Programación</h3>
-            <p>
-                Desarrollo de aplicaciones y soluciones tecnológicas personalizadas.
-            </p>
+    <section>
+        <h2>Áreas de Interés</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Desarrollo e Infraestructura</h3>
+                <p>Sistemas y servidores robustos.</p>
+            </div>
+
+            <div class="card">
+                <h3>Análisis de Redes</h3>
+                <p>Flujo de información comunitaria.</p>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section>
+        <h2>Conectemos</h2>
+
+        <div class="links-section">
+            <a href="#" class="btn">Portafolio →</a>
+            <a href="#" class="btn">GitHub →</a>
+            <a href="#" class="btn">Contacto →</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Conectando código y comunidad.</p>
+    </footer>
+
+    <!-- 🔻 TARJETAS CON IMÁGENES FUNCIONANDO -->
+    <section class="tarjetas-final">
+
+        <div class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" alt="Ciberseguridad">
+            <h3>Ciberseguridad</h3>
+            <p>Protección de sistemas y datos contra amenazas digitales.</p>
+        </div>
+
+        <div class="tarjeta">
+            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Cloud Computing">
+            <h3>Cloud Computing</h3>
+            <p>Despliegue y escalado de aplicaciones en la nube.</p>
+        </div>
+
+    </section>
 
 </div>
 
 </body>
-</html>
+</html>ç
